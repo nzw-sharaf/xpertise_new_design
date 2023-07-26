@@ -129,12 +129,12 @@ class WebsiteSettingController extends Controller
                     $value = WebsiteSetting::getLogo();
                 }
                 if ($request->hasFile('favicon')) {
-                      $setting->clearMediaCollection('favicons');
+                    $setting->clearMediaCollection('favicons');
                     $setting->addMediaFromRequest('favicon')->toMediaCollection('favicons');
                     $value = WebsiteSetting::getFavicon();
                 }
                 if ($request->hasFile('footer_logo')) {
-                      $setting->clearMediaCollection('footer_logos');
+                    $setting->clearMediaCollection('footer_logos');
                     $setting->addMediaFromRequest('footer_logo')->toMediaCollection('footer_logos');
                     $value = WebsiteSetting::getFooterLogo();
                 }

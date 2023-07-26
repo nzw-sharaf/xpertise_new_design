@@ -15,6 +15,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
 <script>
+     $(document).ready(function() {
+        var img = $(".navMenu li.active a").attr("data-image");
+        $(".offCanvasMenuBg").css("background-image", "url('"+img+"')");
+        $(".navMenu li a").mouseover(function(event){
+            var img = $(this).attr("data-image");
+            $(".offCanvasMenuBg").css("background-image", "url('"+img+"')");
+        });
+        $(".navMenu li a").mouseleave(function(){
+            var img = $(".navMenu li.active a").attr("data-image");
+        $(".offCanvasMenuBg").css("background-image", "url('"+img+"')");
+        });
+    });
+</script>
+
+<script>
     $(document).ready(function() {
         toastr.options.timeOut = 10000;
         toastr.options.closeButton = true;

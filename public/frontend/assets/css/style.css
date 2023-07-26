@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     top: 0;
     position: relative;
-    font-family: 'HK Grotesk';
-    font-weight: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     overflow-x:hidden;
     font-style: normal;
 }
@@ -17,13 +18,136 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: '';
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-style: normal;
 }
 p,
-small {
-    font-family: '';
-    font-weight: normal;
+small,
+span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     font-style: normal;
+}
+/* common  */
+.fs-14 {
+    font-size: 14px;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.text-red{
+    color: #FF5055;
+}
+.line-red {
+    width: 45px;
+  height: 0;
+  border: 1px solid #FF5055;
+  margin: 3px;
+  display: inline-block;
+}
+.borderWho {
+    position: relative;
+}
+.borderWho::after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 1px;
+    height: 60%;
+    top: 20%;
+    bottom: 20%;
+    right: 0px;
+}
+.mainHeading h4{
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.mainHeading span{
+    font-weight: 900;
+}
+/* navbar  */
+.navMain {
+    position: absolute;
+    width: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.navMenu li a {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.navMenu li.active a {
+    color: #FF5055;
+}
+.navMenu li a:hover {
+    color: #FF5055;
+}
+.socialLinkNav li {
+    display: inline;
+    padding-left: 6px;
+}
+.socialLinkNav li .iconRound {
+    border: 1px solid #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+.socialLinkNav li .iconRound i {
+    font-size: 16px;
+}
+.offCanvasMenuBg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh !important;
+    height: 100%;
+    -webkit-transition: background-image 0.4s ease;
+    -moz-transition: background-image 0.4s ease;
+    -o-transition: background-image 0.4s ease;
+    transition: background-image 0.4s ease;
+}
+
+/* Home  */
+.mainBg {
+    position: relative;
+    background-image: url('../images/banner/homeBg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.homeHead {
+    color: #fff;
+    text-transform: uppercase;
+}
+.homeHead h1 {
+    font-weight: 900;
+    font-size: 4.8em;
+}
+.homeHead h4 {
+font-weight: 600;
+font-size: 1.6em;
+}
+.scrollBtn {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.letsTalkBtn {
+    position: absolute;
+    bottom: 4%;
+    right: 8%;
 }
